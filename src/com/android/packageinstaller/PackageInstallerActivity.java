@@ -251,6 +251,25 @@ public class PackageInstallerActivity extends Activity implements OnCancelListen
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        if (mOk != null) {
+            mOk.setEnabled(true);
+        }
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+
+        if (mOk != null) {
+            // Don't allow the install button to be clicked as there might be overlays
+            mOk.setEnabled(false);
+        }
+    }
+
     private void showDialogInner(int id) {
         // TODO better fix for this? Remove dialog so that it gets created again
         removeDialog(id);
