@@ -31,20 +31,24 @@
         android:layout_width="match_parent"
         android:layout_height="?android:attr/actionBarSize"
         android:orientation="horizontal"
+        android:paddingTop="8dip"
         android:gravity="center_vertical">
 
         <ImageView android:id="@+id/app_icon"
             android:layout_marginStart="16dp"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:scaleType="fitCenter" />
+            android:layout_width="@android:dimen/app_icon_size"
+            android:layout_height="@android:dimen/app_icon_size"
+            android:layout_rowSpan="2"
+            android:paddingTop="16dip"
+            android:scaleType="centerInside" />
 
         <TextView android:id="@+id/app_name"
-            android:layout_marginStart="32dp"
-            android:layout_marginEnd="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/titleTextStyle"
+            android:paddingTop="16dip"
+            android:textAppearance="@android:style/TextAppearance.Material.Headline"
             android:singleLine="true"
             android:ellipsize="end" />
 
@@ -63,7 +67,8 @@
             android:background="?android:attr/colorPrimary"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:paddingStart="16dp"
-            android:paddingEnd="16dp" />
+            android:paddingEnd="16dp"
+            android:paddingTop="16dip" />
     </LinearLayout>
 
     <TextView android:id="@+id/install_confirm_question"
