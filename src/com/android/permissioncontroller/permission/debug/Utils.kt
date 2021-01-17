@@ -36,10 +36,8 @@ const val PROPERTY_CAMERA_MIC_ICONS_ENABLED = "camera_mic_icons_enabled"
  *
  * @return whether the flag is enabled
  */
-fun isPermissionsHub2FlagEnabled(): Boolean {
-    return DeviceConfig.getBoolean(DeviceConfig.NAMESPACE_PRIVACY,
-        PROPERTY_PERMISSIONS_HUB_2_ENABLED, false)
-}
+fun isPermissionsHub2FlagEnabled() = true
+
 /**
  * Whether to show the Permissions Dashboard
  *
@@ -54,10 +52,7 @@ fun shouldShowPermissionsDashboard(): Boolean {
  *
  * @return whether the Camera and Mic Icons are enabled.
  */
-fun isCameraMicIconsFlagEnabled(): Boolean {
-    return DeviceConfig.getBoolean(DeviceConfig.NAMESPACE_PRIVACY,
-        PROPERTY_CAMERA_MIC_ICONS_ENABLED, false)
-}
+fun isCameraMicIconsFlagEnabled() = true
 
 /**
  * Whether to show Camera and Mic Icons. They should be shown if the permission hub, or the icons

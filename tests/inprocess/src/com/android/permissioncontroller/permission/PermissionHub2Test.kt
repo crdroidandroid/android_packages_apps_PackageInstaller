@@ -49,8 +49,7 @@ open class PermissionHub2Test {
         @JvmStatic
         @BeforeClass
         fun enablePermissionHub2() {
-            wasPermissionHubEnabled = DeviceConfig.getBoolean(NAMESPACE_PRIVACY,
-                    PROPERTY_PERMISSIONS_HUB_2_ENABLED, false)
+            wasPermissionHubEnabled = true
 
             if (!wasPermissionHubEnabled) {
                 runShellCommand(
